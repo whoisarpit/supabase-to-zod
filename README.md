@@ -72,6 +72,18 @@ pnpm dev
 - `pnpm start`: Run compiled JavaScript
 - `pnpm lint`: Run ESLint
 
+## Publishing
+### Versioning
+To publish a new version:
+1. Update version in `package.json`
+2. Create a git tag: `git tag v0.x.x`
+3. Push the tag: `git push origin v0.x.x`
+
+### Automated Workflow
+- Pushing a version tag triggers npm publish
+- Requires `NPM_TOKEN` secret in GitHub repository settings
+- Automatically creates GitHub release
+
 ## Features
 - Converts Supabase TypeScript types to Zod schemas
 - Supports tables, enums, and complex types
