@@ -1,14 +1,17 @@
 # Supabase to Zod Type Generator
 
 ## Overview
+
 This project generates Zod schemas from Supabase TypeScript type definitions, enabling runtime type validation for Supabase database types.
 
 ## Prerequisites
+
 - Node.js (v18+)
 - npm or pnpm
 - Supabase CLI
 
 ## Installation
+
 ```bash
 # Using npm
 npm install -g @whoisarpit/supabase-to-zod
@@ -18,7 +21,9 @@ pnpm add -g @whoisarpit/supabase-to-zod
 ```
 
 ## Usage
+
 ### CLI
+
 ```bash
 # Generate Zod schemas from default types_db.ts
 supabase-to-zod
@@ -37,16 +42,18 @@ supabase gen types | supabase-to-zod -o ./zod-schemas.ts
 ```
 
 ### CLI Options
-- `-i, --input`:  Input TypeScript file (optional, default: `./types_db.ts`)
+
+- `-i, --input`: Input TypeScript file (optional, default: `./types_db.ts`)
 - `-o, --output`: Output Zod schemas file (optional, defaults to stdout)
-- `-h, --help`:   Show help message
+- `-h, --help`: Show help message
 
 ### Programmatic Usage
+
 ```typescript
-import { generateZodSchemas } from '@whoisarpit/supabase-to-zod';
+import { generateZodSchemas } from "@whoisarpit/supabase-to-zod";
 
 // From file
-generateZodSchemas(fileContents, './types_db.zod.ts');
+generateZodSchemas(fileContents, "./types_db.zod.ts");
 
 // From string
 const schemas = await generateZodSchemas(typeDefinitionString);
@@ -54,6 +61,7 @@ console.log(schemas);
 ```
 
 ## Development
+
 ```bash
 # Clone the repository
 git clone https://github.com/whoisarpit/supabase-to-zod.git
@@ -67,24 +75,69 @@ pnpm dev
 ```
 
 ## Scripts
+
 - `pnpm build`: Compile TypeScript
 - `pnpm dev`: Run the type generator
 - `pnpm start`: Run compiled JavaScript
 - `pnpm lint`: Run ESLint
+- `pnpm format`: Format code with Prettier
+- `pnpm format:check`: Check code formatting
+
+## Code Quality
+
+- ESLint for static code analysis
+- Prettier for consistent code formatting
+- TypeScript for type safety
+
+### Formatting
+
+```bash
+# Format all files
+pnpm format
+
+# Check formatting without changing files
+pnpm format:check
+```
+
+#### Prettier Ignore
+
+Some files are automatically ignored by Prettier, including:
+
+- Example files
+- Generated TypeScript files
+- Build output
+- Configuration files
+
+You can customize ignored files in `.prettierignore`
 
 ## Publishing
-### Versioning
-To publish a new version:
+
+### Versioning Commands
+
+- `pnpm release:patch`: Increment patch version (0.0.x)
+- `pnpm release:minor`: Increment minor version (0.x.0)
+- `pnpm release:major`: Increment major version (x.0.0)
+- `pnpm prerelease:beta`: Create a beta prerelease version
+
+### Publishing Commands
+
+- `pnpm publish:beta`: Publish beta version
+- `pnpm publish:latest`: Publish latest version
+
+### Manual Process
+
 1. Update version in `package.json`
 2. Create a git tag: `git tag v0.x.x`
 3. Push the tag: `git push origin v0.x.x`
 
 ### Automated Workflow
+
 - Pushing a version tag triggers npm publish
 - Requires `NPM_TOKEN` secret in GitHub repository settings
 - Automatically creates GitHub release
 
 ## Features
+
 - Converts Supabase TypeScript types to Zod schemas
 - Supports tables, enums, and complex types
 - Generates type-safe schemas for row, insert, and update operations
@@ -93,7 +146,9 @@ To publish a new version:
 - Programmatic usage
 
 ## Contributing
+
 Contributions are welcome! Please open an issue or submit a pull request.
 
 ## License
+
 ISC License

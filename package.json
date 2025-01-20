@@ -21,7 +21,15 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "prepare": "pnpm build",
-    "example:generate": "ts-node src/index.ts -i example/db.types.ts -o example/zod.types.ts"
+    "example:generate": "ts-node src/index.ts -i example/db.types.ts -o example/zod.types.ts",
+    "release:patch": "npm version patch && git push origin && git push origin --tags",
+    "release:minor": "npm version minor && git push origin && git push origin --tags",
+    "release:major": "npm version major && git push origin && git push origin --tags",
+    "prerelease:beta": "npm version prerelease --preid=beta && git push origin && git push origin --tags",
+    "publish:beta": "npm publish --tag beta",
+    "publish:latest": "npm publish --tag latest",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "keywords": [
     "supabase",
@@ -30,7 +38,6 @@
     "type-generator",
     "schema-validation"
   ],
-  "type": "module",
   "engines": {
     "node": ">=18.0.0"
   },
@@ -47,19 +54,22 @@
   "publishConfig": {
     "access": "public"
   },
+  "dependencies": {
+    "ts-morph": "^25.0.0",
+    "zod": "^3.24.1"
+  },
   "devDependencies": {
     "@eslint/js": "^9.18.0",
     "@types/node": "^22.10.7",
     "@typescript-eslint/eslint-plugin": "^8.20.0",
     "@typescript-eslint/parser": "^8.20.0",
     "eslint": "^9.18.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-prettier": "^5.2.3",
+    "prettier": "^3.4.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.3",
     "typescript-eslint": "^8.20.0"
-  },
-  "dependencies": {
-    "ts-morph": "^25.0.0",
-    "zod": "^3.24.1"
   },
   "packageManager": "pnpm@9.15.4+sha512.b2dc20e2fc72b3e18848459b37359a32064663e5627a51e4c74b2c29dd8e8e0491483c3abb40789cfd578bf362fb6ba8261b05f0387d76792ed6e23ea3b1b6a0"
 }

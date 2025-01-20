@@ -1,0 +1,12 @@
+# Build output
+dist/
+build/
+out/
+
+# Dependency directories
+node_modules/
+
+# Example files (optional to ignore)
+example/*.ts
+
+pnpm-workspace.yaml
