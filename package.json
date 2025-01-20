@@ -1,0 +1,65 @@
+{
+  "name": "@whoisarpit/supabase-to-zod",
+  "version": "0.1.0",
+  "description": "Convert Supabase TypeScript types to Zod schemas",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "supabase-to-zod": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "example"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "pnpm build",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prepare": "pnpm build",
+    "example:generate": "ts-node src/index.ts -i example/db.types.ts -o example/zod.types.ts"
+  },
+  "keywords": [
+    "supabase",
+    "zod",
+    "typescript",
+    "type-generator",
+    "schema-validation"
+  ],
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/whoisarpit/supabase-to-zod.git"
+  },
+  "homepage": "https://github.com/whoisarpit/supabase-to-zod#readme",
+  "bugs": {
+    "url": "https://github.com/whoisarpit/supabase-to-zod/issues"
+  },
+  "author": "Arpit<mail@arpit.io>",
+  "license": "ISC",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.18.0",
+    "@types/node": "^22.10.7",
+    "@typescript-eslint/eslint-plugin": "^8.20.0",
+    "@typescript-eslint/parser": "^8.20.0",
+    "eslint": "^9.18.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.20.0"
+  },
+  "dependencies": {
+    "ts-morph": "^25.0.0",
+    "zod": "^3.24.1"
+  },
+  "packageManager": "pnpm@9.15.4+sha512.b2dc20e2fc72b3e18848459b37359a32064663e5627a51e4c74b2c29dd8e8e0491483c3abb40789cfd578bf362fb6ba8261b05f0387d76792ed6e23ea3b1b6a0"
+}
