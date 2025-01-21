@@ -16,6 +16,7 @@ export default tseslint.config(
       "*.zod.ts",
       "*.config.js",
       "*.json",
+      "demo/",
     ],
   },
   eslint.configs.recommended,
@@ -58,5 +59,6 @@ export default tseslint.config(
       "prefer-const": "error",
       "no-var": "error",
     },
+    ignores: ["demo/"],
   }
 );

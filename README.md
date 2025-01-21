@@ -4,7 +4,6 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue?logo=typescript)](https://www.typescriptlang.org/)
 [![GitHub last commit](https://img.shields.io/github/last-commit/whoisarpit/supabase-to-zod)](https://github.com/whoisarpit/supabase-to-zod/commits/main)
 
-
 Supabase to Zod Type Generator is a tool that automatically converts Supabase TypeScript type definitions into Zod schemas.
 
 ## Prerequisites
@@ -90,11 +89,6 @@ pnpm dev
 - `pnpm release:minor`: Increment minor version
 - `pnpm release:major`: Increment major version
 - `pnpm prerelease:beta`: Create a beta prerelease version
-
-### Publishing Commands
-
-- `pnpm publish:beta`: Publish beta version
-- `pnpm publish:latest`: Publish latest version
 
 ## Contributing
 

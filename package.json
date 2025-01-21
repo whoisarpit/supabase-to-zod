@@ -15,6 +15,7 @@
     "example"
   ],
   "scripts": {
+    "prepare": "husky",
     "build": "tsc",
     "prepublishOnly": "pnpm build",
     "dev": "jiti src/index.ts",
@@ -24,9 +25,7 @@
     "release:patch": "npm version patch && git push origin && git push origin --tags",
     "release:minor": "npm version minor && git push origin && git push origin --tags",
     "release:major": "npm version major && git push origin && git push origin --tags",
-    "prerelease:beta": "npm version prerelease --preid=beta && git push origin && git push origin --tags",
-    "publish:beta": "npm publish --tag beta",
-    "publish:latest": "npm publish --tag latest"
+    "prerelease:beta": "npm version prerelease --preid=beta && git push origin && git push origin --tags"
   },
   "keywords": [
     "supabase",
@@ -63,10 +62,21 @@
     "eslint": "^9.18.0",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-prettier": "^5.2.3",
+    "husky": "^9.1.7",
     "jiti": "^2.4.2",
+    "lint-staged": "^15.4.1",
     "prettier": "^3.4.2",
     "typescript": "^5.7.3",
     "typescript-eslint": "^8.20.0"
   },
-  "packageManager": "pnpm@9.15.4+sha512.b2dc20e2fc72b3e18848459b37359a32064663e5627a51e4c74b2c29dd8e8e0491483c3abb40789cfd578bf362fb6ba8261b05f0387d76792ed6e23ea3b1b6a0"
+  "packageManager": "pnpm@9.15.4+sha512.b2dc20e2fc72b3e18848459b37359a32064663e5627a51e4c74b2c29dd8e8e0491483c3abb40789cfd578bf362fb6ba8261b05f0387d76792ed6e23ea3b1b6a0",
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yml}": [
+      "prettier --write"
+    ]
+  }
 }
