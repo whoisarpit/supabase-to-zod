@@ -60,3 +60,5 @@ build/Release
 
 # npm publish local testing
 .npmrc
+
+.next

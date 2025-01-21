@@ -1,6 +1,6 @@
 # Supabase to Zod Type Generator
 
-[![npm version](https://badge.fury.io/js/%40whoisarpit%2Fsupabase-to-zod.svg)](https://badge.fury.io/js/%40whoisarpit%2Fsupabase-to-zod)
+[![npm version](https://badge.fury.io/js/%40whoisarpit%2Fsupabase-to-zod.svg)](https://npmjs.com/package/@whoisarpit/supabase-to-zod)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue?logo=typescript)](https://www.typescriptlang.org/)
 [![GitHub last commit](https://img.shields.io/github/last-commit/whoisarpit/supabase-to-zod)](https://github.com/whoisarpit/supabase-to-zod/commits/main)
 
