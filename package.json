@@ -2,6 +2,7 @@
   "name": "@whoisarpit/supabase-to-zod",
   "version": "0.1.1-beta.0",
   "description": "Convert Supabase TypeScript types to Zod schemas",
+  "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
@@ -20,7 +21,6 @@
     "dev": "ts-node src/index.ts",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "prepare": "pnpm build",
     "example:generate": "ts-node src/index.ts -i example/db.types.ts -o example/zod.types.ts",
     "release:patch": "npm version patch && git push origin && git push origin --tags",
     "release:minor": "npm version minor && git push origin && git push origin --tags",
