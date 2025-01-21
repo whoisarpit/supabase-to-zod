@@ -1,6 +1,6 @@
 {
   "name": "@whoisarpit/supabase-to-zod",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Convert Supabase TypeScript types to Zod schemas",
   "type": "module",
   "main": "dist/index.js",
