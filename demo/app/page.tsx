@@ -8,6 +8,10 @@ import { useQuery } from "@tanstack/react-query";
 import { debounce } from "lodash-es";
 import { example } from "./example";
 
+/**
+ * Renders the Home component, which includes an input field and displays generated Zod schemas.
+ * @returns {JSX.Element} The rendered Home component
+ */
 export default function Home() {
   const [input, setInput] = useState(example);
   const [copied, setCopied] = useState(false);
