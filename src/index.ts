@@ -19,6 +19,11 @@ const logger = {
 
 // Helper function to read input from stdin
 const readStdin = (): Promise<string> => {
+  /**
+   * Reads input from the standard input stream asynchronously.
+   * @returns {Promise<string>} A promise that resolves with the accumulated input as a string.
+   * @throws {Error} If there's an error while reading from the input stream.
+   */
   return new Promise((resolve, reject) => {
     const rl = readline.createInterface({
       input: process.stdin,
